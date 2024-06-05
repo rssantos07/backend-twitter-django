@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "twitter"
+version = "0.1.0"
+description = "rest api"
+authors = ["Rodrigo Santos <rssantos07@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.2.0"
+factory-boy = "^3.3.0"
+django = "^5.0.6"
+djangorestframework = "^3.15.1"
+django-cors-headers = "^4.3.1"
+djangorestframework-simplejwt = "^5.3.1"
+pillow = "^10.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
