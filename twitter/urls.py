@@ -27,5 +27,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include('usuario.urls')),
     path("update_server/", views.update, name="update"),
+    path("project/", views.project, name="project"),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
