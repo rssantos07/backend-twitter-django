@@ -15,6 +15,9 @@ django-cors-headers = "^4.3.1"
 djangorestframework-simplejwt = "^5.3.1"
 pillow = "^10.3.0"
 gitpython = "^3.1.43"
+psycopg2-binary = "^2.9.9"
+whitenoise = "^6.6.0"
+gunicorn = "^22.0.0"
 
 
 [build-system]
