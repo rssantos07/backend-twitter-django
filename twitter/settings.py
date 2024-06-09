@@ -18,8 +18,10 @@ from django.conf import settings
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'posts') 
+
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000"
+    'http://localhost:3000', 'https://frontend-twitter-django.vercel.app'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -67,7 +69,7 @@ ROOT_URLCONF = "twitter.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, "twitter", "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
