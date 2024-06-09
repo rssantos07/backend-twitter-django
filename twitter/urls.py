@@ -21,8 +21,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from twitter import views
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include('usuario.urls')),
+    path("update_server/", views.update, name="update"),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
