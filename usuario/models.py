@@ -22,7 +22,7 @@ class Profile(models.Model):
     full_name = models.CharField(max_length=300)
     bio = models.CharField(max_length=300)
     image = models.ImageField(default="default.jpg",
-                              upload_to="media/user_images/", null=True, blank=True)
+                              upload_to="user_images/", null=True, blank=True)
     verified = models.BooleanField(default=False)
 
     def __str__(self) -> str:
@@ -45,9 +45,9 @@ post_save.connect(save_user_profile, sender=User)
 class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     mensagem = models.TextField()
-    imagem = models.ImageField(upload_to='media/posts/', blank=True, null=True)
+    imagem = models.ImageField(upload_to='posts/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    
+
     def formatted_created_at(self):
         return self.created_at.strftime("%d/%m/%Y %H:%M")
 
@@ -56,6 +56,6 @@ class Post(models.Model):
 
 
 def create(self, validated_data):
-        user = self.context['request'].user  # Obtém o usuário da solicitação
-        post = Post.objects.create(user=user, **validated_data)
-        return post
+    user = self.context['request'].user  # Obtém o usuário da solicitação
+    post = Post.objects.create(user=user, **validated_data)
+    return post
