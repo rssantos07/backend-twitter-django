@@ -18,7 +18,12 @@ gitpython = "^3.1.43"
 psycopg2-binary = "^2.9.9"
 whitenoise = "^6.6.0"
 gunicorn = "^22.0.0"
+django-debug-toolbar = "^4.4.2"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+factory-boy = "^3.3.0"
 
 [build-system]
 requires = ["poetry-core"]
