@@ -33,7 +33,7 @@ CORS_ALLOW_CREDENTIALS = True
 SECRET_KEY = "django-insecure-13!cjpd44ua%7*!k+0-04xp$6kez!!j$(v%j730@xsahpa6qw+"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'rssantos07.pythonanywhere.com']
 
@@ -128,11 +128,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-STATIC_URL = "static/"
+STATIC_URL = "media/"
 MEDIA_URL = '/media/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
