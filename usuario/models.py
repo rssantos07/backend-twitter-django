@@ -56,6 +56,6 @@ class Post(models.Model):
 
 
 def create(self, validated_data):
-    user = self.context['request'].user  # Obtém o usuário da solicitação
+    user = self.context['request'].user  
     post = Post.objects.create(user=user, **validated_data)
     return post
