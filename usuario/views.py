@@ -90,8 +90,6 @@ class PostViewSet(viewsets.ModelViewSet):
         self.perform_create(serializer)
         headers = self.get_success_headers(serializer.data)
         
-        
-        # Mensagem de resposta
         response_data = {
             'mensagem': 'Post criado com sucesso!',
             'data': serializer.data
