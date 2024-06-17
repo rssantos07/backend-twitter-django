@@ -1,10 +1,5 @@
 name: Deploy pythonanywhere webapp
-
-on:
-  push:
-    branches:
-      - 'main'
-
+on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,11 +7,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      # Upload files
+      # ...
 
       - name: Reload webapp
         uses: jensvog/pythonanywhere-webapp-reload-action@v1
         with:
           host: 'www.pythonanywhere.com'
-          username: ${{ secrets.USERNAME }}
-          api-token: ${{ secrets.API_TOKEN }}
-          domain-name: ${{ secrets.DOMAIN_NAME }}
+          username: {{ secrets.rssantos07 }}
+          api-token: {{ secrets.1c65eb3731896cb63a3e96406fe5ee7d55db2c7a}}
+          domain-name: {{ secrets.rssantos07.pythonanywhere.com}}
