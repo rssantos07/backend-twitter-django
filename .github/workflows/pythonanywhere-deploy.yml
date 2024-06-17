@@ -17,5 +17,5 @@ jobs:
         with:
           username: ${{ secrets.PYTHONANYWHERE_USERNAME }}
           api-token: ${{ secrets.PYTHONANYWHERE_API_TOKEN }}
-          domain-name: {{ secrets.DOMAIN_NAME }}
+        
           
